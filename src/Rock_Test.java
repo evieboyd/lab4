@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -30,10 +32,10 @@ public class Rock_Test {
 		
 	@Test
 	public void test_moveRock(){
-//		Rock r1 = new Rock(25,50);
-//		assertEquals("test original y coordinate", 0,r1.getY());
-//		r1.moveRock();
-//		assertEquals("test rock moved",1,r1.getY());
+		Rock r1 = new Rock(25,50);
+		assertEquals("test original y coordinate", 0,r1.getY());
+		r1.moveRock();
+		assertEquals("test rock moved",1,r1.getY());
 	}
 	
 	@Test
@@ -44,9 +46,8 @@ public class Rock_Test {
 	
 	@Test
 	public void test_setxCoord(){
-		Rock r1 = new Rock(25,50);
-		r1.setxCoord(50);
-		assertEquals("Pass xCoord Setter", 50, r1.getX());
+		Rock r = new Rock(25,40);
+		r.setxCoord(5);
+		assertEquals("rock has x coord 5", r.getX()==5);
 	}
-
 }

@@ -12,7 +12,7 @@ public class Player {
 		Ycoord = height;
 		model = "X";
 		this.time = System.currentTimeMillis();
-		this.score  = 0;
+		this.score = 0;
 	}
 
 

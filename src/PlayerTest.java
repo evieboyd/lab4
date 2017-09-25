@@ -14,6 +14,7 @@ public class PlayerTest {
 		assertTrue("player a Ycoord is 8", a.getY()==4);
 		assertTrue("player a time is" + System.currentTimeMillis(), a.getTime()==System.currentTimeMillis());
 		assertTrue("player a score is 0", a.getScore()==0);
+		//System.out.print(a.getScore());
 		//assertTrue("player b height is 4", b.height==7);
 		//assertTrue("player b width is 8", b.weight==2);
 		assertTrue("player b Xcoord is 2", b.getX()==1);

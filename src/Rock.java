@@ -26,7 +26,7 @@ public class Rock {
 		this.xCoord = xCoord;
 	}
 
-	private void setyCoord(int yCoord) {
+	void setyCoord(int yCoord) {
 		this.yCoord = yCoord;
 	}
 	

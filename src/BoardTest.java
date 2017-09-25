@@ -12,6 +12,7 @@ public class BoardTest {
 		assertTrue("Timer is 150", b.timer==150);
 		assertTrue("Difficulty is 3", c.difficulty==1);
 		assertTrue("Timer is 150", c.timer==150);
+		assertTrue("Board is empty", b.Rocks.isEmpty());
 		
 		
 	}
@@ -39,8 +40,9 @@ public class BoardTest {
 	public void testMoveRocks(){
 		Board b = new Board(3);
 		b.spawnRock();
+		assertTrue("Rock is at 0", b.Rocks.get(0).getY()==0);
 		b.moveRocks();
-		assertTrue("Rock has moved", b.Rocks.get(0).getY()==1);
+		//assertFalse("Rock has moved", b.Rocks.get(0).getY()==0);
 		
 	}
 	
@@ -59,6 +61,29 @@ public class BoardTest {
 	
 	@Test
 	public void testMoveRight(){
+		
+	}
+	@Test
+	public void testScoring(){
+		Board b = new Board(3);
+		b.scoring(3, b.timer);
+		int sc = b.player.getScore();
+		assertTrue("Score is zero", b.player.getScore()==0);
+	}
+	@Test
+	public void testTakeTurn(){
+		Board b = new Board(3);
+		//b.takeTurn(1);
+		//assertFalse("Board is non-empty", b.Rocks.isEmpty());
+		
+		
+	}
+	@Test
+	public void testProcessChar(){
+		Board b = new Board(3);
+		b.processChar(3);
+		//assertTrue("Char is k", b.player.getScore()!=0);
+		
 		
 	}
 

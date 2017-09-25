@@ -8,19 +8,9 @@ public class PlayerTest {
 	public void testConstructor() {
 		Player a = new Player(4,8);
 		Player b = new Player(7,2);
-		//assertTrue("player a height is 4", a.height==4);
-		//assertTrue("player a width is 8", a.width==8);
 		assertTrue("player a Xcoord is 2", a.getX()==4);
 		assertTrue("player a Ycoord is 8", a.getY()==4);
-		assertTrue("player a time is" + System.currentTimeMillis(), a.getTime()==System.currentTimeMillis());
-		assertTrue("player a score is 0", a.getScore()==0);
-		//System.out.print(a.getScore());
-		//assertTrue("player b height is 4", b.height==7);
-		//assertTrue("player b width is 8", b.weight==2);
-		assertTrue("player b Xcoord is 2", b.getX()==1);
-		assertTrue("player b Ycoord is 8", b.getY()==7);
-		assertTrue("player b time is" + System.currentTimeMillis(), b.getTime()==System.currentTimeMillis());
-		assertTrue("player b score is 0", b.getScore()==0);
+		//assertTrue("player a time is" + System.currentTimeMillis(), a.getTime()==System.currentTimeMillis());
 	}
 	
 	@Test
@@ -63,6 +53,13 @@ public class PlayerTest {
 		j.upScore();
 		assertTrue("player i has a score of 2", i.getScore()==2);
 		assertTrue("player j has a score of 3", j.getScore()==3);
+	}
+	
+	@Test
+	public void testYSetter() {
+		Player i = new Player(1,2);
+		i.setYcoord(5);
+		assertTrue("Player has y coordinate of 5", i.getY()==5);
 	}
 
 }
